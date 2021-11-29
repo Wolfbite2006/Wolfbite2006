@@ -1,4 +1,5 @@
 from djitellopy import Tello
+from time import sleep
 
 tello = Tello()
 
@@ -6,12 +7,24 @@ tello.connect()
 tello.takeoff()
 
 #1-3
-tello.move_up(182.88)
-tello.move_forward(182.88)
+tello.move_up(101)
+tello.move_forward(182)
 tello.rotate_counter_clockwise(90)
 
 #4-5
-tello.move_forward(182.88)
+tello.move_forward(182)
+tello.rotate_clockwise(90)
 
 #-6-7
+tello.move_down(91)
+tello.move_forward(91)
+tello.rotate_counter_clockwise(90)
+
+#8-9
+tello.move_up(30)
+tello.move_up(91)
 tello.rotate_clockwise(90)
+
+#10-11
+tello.move_forward(122)
+tello.land()
