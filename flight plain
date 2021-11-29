@@ -3,6 +3,7 @@ from time import sleep
 
 tello = Tello()
 
+#connection and takeoff
 tello.connect()
 tello.takeoff()
 
